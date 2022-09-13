@@ -1,6 +1,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 <div class="container text-center">
-    <h1>Your password is:</h1>
-    <h2 class="alert alert-success">{{ password }}</h2>
-    <a href="{% url 'generator' %}" class="btn btn-info">Home</a>
+<h1>Markove aplikacije</h1>
+
+<a href="{% url 'generator' %}">Generator lozinke</a>
+<a href="{% url 'palindrom' %}">Provera palindroma</a>
+<a href="{% url 'wordcount' %}">Brojac reci</a>
 </div>
