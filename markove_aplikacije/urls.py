@@ -31,5 +31,6 @@ urlpatterns = [
     path('palout/', palindrom_views.palout, name='palout'),
     path('wordcount/', wordcount_views.wordcount, name='wordcount'),
     path('wordcountout/', wordcount_views.wordcountout, name='wordcountout'),
+    path('about/', generator_views.about, name='about'),
 
 ]

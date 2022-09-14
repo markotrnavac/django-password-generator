@@ -1,24 +1,57 @@
-<!DOCTYPE html>
-<html lang="en"></html>
+<!doctype html>
+<html lang="en">
 <head>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-</head>    
+
+</head>
 <body>
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'generator' %}">Password</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'palindrom' %}">Palindrom</a>
+        </li>
+        <li class="nav-item active">
+            <a class="nav-link" href="{% url 'wordcount' %}">Wordcount</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'about' %}">About</a>
+        </li> 
+        
+      </ul>
+    </div>
+</nav>
 <main>
-<div class="container text-center">
-    <br>
-    <h2>Brojanje reci u tekstu</h2>
-    <form action="{% url 'wordcountout' %}">
-        <label for="tekst">Unesi tekst:</label><br>
-        <textarea id="tekst" name="tekst" rows="4" cols="50">         
-        </textarea>
-        <br><br>
-        <input type="submit" value="Izbroj">
-    </form>
-</div>
+     
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+        <br>
+        <div class="container">
+            <h1 class="display-3">Brojanje reci u tekstu</h1>
+        </div>
+    </div>
+    <div class="container">
+        <form action="{% url 'wordcountout' %}">
+            <label for="tekst">Unesi tekst:</label><br>
+            <textarea id="tekst" name="tekst" rows="4" cols="50"style="text-align:left"></textarea>
+            <br><br>
+            <input type="submit" value="Izbroj" class="btn btn-light">
+        </form>
+    </div>
 </main>
-<!-- <footer class="container">
-    <p>&copy; Beograd, septembar 2022</p>
-</footer> -->
+
 </body>
 </html>
+
+
+
